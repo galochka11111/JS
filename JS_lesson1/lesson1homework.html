@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>hbh</h1>
+<script>
+    /*Створити змінні. Присвоїти кожному з них значення: 'hello','owu','com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false.*/
+   let hello='hello'
+   let owu='owu'
+   let com='com'
+   let d='ua'
+   let e='1'
+   let f='10'
+   let g='-999'
+   let h='123'
+   let i='3,14'
+   let k='2,7'
+   let l='16'
+   let m='true'
+   let n='false'
+   /* Вивести кожну змінну за допомогою: console.log , alert, document.write*/
+   console.log(hello);
+   console.log(owu);
+   console.log(com)
+   console.log(d)
+   console.log(e)
+   console.log(f)
+   console.log(g)
+   console.log(h)
+   console.log(i)
+   console.log(k)
+   console.log(l)
+   console.log(m)
+   console.log(n)
+
+   alert(hello);
+   alert(owu);
+   alert(com);
+   alert(d);
+   alert(e);
+   alert(f);
+   alert(g);
+   alert(h);
+   alert(i);
+   alert(k);
+   alert(l);
+   alert(m);
+   alert(n);
+
+   document.write(hello);
+   document.write(owu);
+   document.write(com);
+   document.write(d);
+   document.write(e);
+   document.write(f);
+   document.write(g);
+   document.write(h);
+   document.write(i);
+   document.write(k);
+   document.write(l);
+   document.write(m);
+   document.write(n);
+
+   /* Переприсвоїти кожній змінній з завдання значення на довільне.
+        Вивести кожну змінну за допомогою: console.log , alert, document.write*/
+
+
+
+    /*Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ.
+    З'єднати їх в одну змінну person. (Не об'єкт)*/
+
+    let firstname='Halyna'
+    let middlename='Zenoviivna'
+    let lastname='Polietaieva'
+
+    let person=(firstname+' '+ middlename+' '+lastname);
+    console.log(person)
+
+    /*За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
+    Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".*/
+
+    let answer=prompt(person);
+
+    let answer2=prompt(firstname);
+    let answer3=prompt(middlename);
+    let answer4=prompt(lastname);
+
+    let  answer5=prompt('Hello'+' '+firstname+' '+middlename+'. '+'You are 28')
+
+
+    /*За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
+  let a = 100; let b = '100'; let c = true;*/
+    let a=100;
+    let b=100;
+    let c=true;
+
+    console.log(typeof a); //number//
+    console.log(typeof b)  //number//
+    console.log(typeof c)  //boolean//
+
+    /*Визначити відповідний оператор в виразах що б вийшов відповідний результат.
+        В однакових виразах не використовувати однакові оператори!!!*/
+
+   let z=5;
+   let x=6;
+   let y=10;
+   let xy=10;
+   let w=123;
+
+    console.log(z<x); //true//
+    console.log(z>x); //false//
+    console.log(z===y); //false//
+    console.log(z>=y); //false//
+    console.log(y===xy); //true//
+    console.log(y===10); //true//
+    console.log(y<xy); //false//
+    console.log(y>xy); //false//
+    console.log(y===16) //false//
+    console.log(w<xy) //false
+    console.log(w===123) //true//
+
+    /*Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?*/
+    let am = 5;
+    let str = "20";
+
+    document.write("<br/>")
+    document.write(str + am + "<br/>"); // конкатинація //
+    document.write(str - am + "<br/>"); // обчислення //
+    document.write(str * "2" + "<br/>"); // обчислення //
+    document.write(str / 2 + "<br/>"); // обчислення //
+
+
+</script>
+</body>
+</html>
