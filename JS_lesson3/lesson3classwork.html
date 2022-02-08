@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    /*зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]та:
+        1. перебрати його циклом while*/
+    let mas=[2,17,13,6,22,31,45,66,100,-18];
+    let a=0
+    while (a<mas.length){
+        console.log(mas[a]);
+        a++;
+    }
+    /*2. перебрати його циклом for*/
+
+    for (let a=0; a<10; a++){
+        console.log(mas[a])
+    }
+    /*3. перебрати циклом while та вивести  числа тільки з непарним індексом*/
+    while (a<mas.length){
+        if (a%2===1){
+            console.log(mas[a]);
+        }
+        a++
+    }
+    /*4. перебрати циклом for та вивести  числа тільки з непарним індексом*/
+    for (let a=0; a<10; a++){
+        if (a%2===1){
+            console.log('a: '+a+'')
+        }
+    }
+    /*5. перебрати циклом while та вивести  числа тільки парні  значення*/
+    while (a<mas.length){
+        if (a%2===0){
+            console.log(mas[a])
+        }
+    }
+    /*6. перебрати циклом for та вивести  числа тільки парні  значення*/
+    for (let a=0; a<10; a++){
+        if (a%2===0){
+            console.log('a: '+a+'')
+        }
+    }
+    /*7. замінити кожне число кратне 3 на слово "okten"*/
+    for (let a=0; a<10; a++){
+        if (mas[a]%3===0){
+            mas[a]='Okten';
+            console.log(mas[a])
+        }
+    }
+    /*8. вивести масив в зворотньому порядку.*/
+    let masSecond=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    for ( let b=masSecond.length-1; b>=0; b--){
+        console.log(masSecond[b])
+    }
+    /*9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)*/
+    for (let a=mas.length-1;a>=0;a--){
+        console.log(mas[a])
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    /* --створити масив з:
+     - з 5 числових значень
+     - з 5 стічкових значень
+     - з 5 значень стрічкового, числового та булевого типу
+     - та вивести його в консол*/
+    let mas=[4,44,5,55,6];
+    console.log(mas);
+    let masTwo=['dog','cat','rat','bird','snake'];
+    console.log(masTwo);
+    let masThree=['dress', 15, true, 'shoes', false];
+    console.log(masThree);
+
+    /*Створити пустий масив.
+    Наповнити його будь-якими значеннями звертаючись до конкретного індексу. Вивести в консоль*/
+
+    let masFour=[];
+    masFour[0]='Hello';
+    masFour[1]='Привіт';
+    masFour[2]='Cześć';
+    console.log(masFour);
+
+    /*За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині*/
+
+    document.write('<div>');
+
+    for (let i=0; i<10; i++){
+        document.write(`<div>Ведмідь заліг у свій барліг, коли на землю випав сніг.</div>`)
+
+    }
+
+    /*За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині*/
+
+    document.write('<br>')
+    for (let i = 0; i < 10; i++) {
+        document.write(`<div>${i}Коли ведмідь устане, тоді і сніг розтане.</div>`)
+
+    }
+    /*- За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.*/
+    document.write('<br>');
+    let u=0;
+    while (u<20){
+        document.write(`<h1>Люта зимонька прийшла, все снігами замела.</h1>`)
+        u++
+    }
+
+    /*- За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.*/
+    document.write('<br>');
+    let p=0;
+    while (p<20){
+        document.write(`<h1>${p}Поле, ліс, дороги всі -у засніженій красі.</h1>`)
+        p++
+    }
+
+   /*- Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.*/
+
+    masFive=[22, 33, 3, 12, 4, 6, 78, 54, 90, 18];
+    for (let d=0; d<masFive.length; d++){
+        console.log(masFive[d])
+    }
+    /*- Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.*/
+
+    masSix=['one','two','three','four','five','six','seven','eight','nine','ten'];
+    for (let e=0; e<masSix.length; e++) {
+        console.log(masSix[e]);
+    }
+    /*- Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.*/
+
+    masSeven=[123, 'frog', 15, true, 80, false, 'sun', 'TV', 96, 'Hello'];
+    for (let f=0; f<masSeven.length; f++){
+        console.log(masSeven[f]);
+    }
+    /*- Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести
+     тільки булеві елементи*/
+
+    masEight=['table', false, 'picture', 45, true, true, 'window', 79, 368, false];
+    for (let g=0; g<masEight.length; g++){
+        if (typeof masEight[g]==='boolean'){
+            console.log(masEight[g])
+        }
+    }
+    /*- Створити масив з 10 елементів числового, стірчкового і булевого типу.
+    За допомогою if та typeof вивести тільки числові елементи*/
+    for (let g=0; g<masEight.length; g++) {
+        if (typeof masEight[g] === 'number') {
+            console.log(masEight[g])
+        }
+    }
+    /*- Створити масив з 10 елементів числового, стрічкового і булевого типу.
+    За допомогою if та typeof вивести тільки рядкові елементи*/
+    for (let g=0; g<masEight.length; g++) {
+        if (typeof masEight[g] === 'string') {
+            console.log(masEight[g])
+        }
+    }
+    /*- Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних
+     індексів. Вивести в консоль всі його елементи в циклі.*/
+    masNine=[];
+    masNine[0]='The'
+    masNine[1]='weather'
+    masNine[2]='is'
+    masNine[3]='disgusting'
+    masNine[4]=2
+    masNine[5]=true
+    masNine[6]=29
+    masNine[7]=false
+    masNine[8]=13
+    masNine[9]=false
+
+    for (j=0; j<masNine.length; j++) {
+        console.log(masNine[j])
+    }
+    /*- Створити цикл for на 10  ітерацій з кроком 1.
+    Вивести поточний номер кроку через console.log та document.write*/
+    document.write('<br>');
+
+    for (let h = 0; h < 10; h++) {
+        console.log('???: '+h+'');
+        document.write('???: '+h+'');
+    }
+    /*- Створити цикл for на 100 ітерацій з кроком 1.
+    Вивести поточний номер кроку через console.log та document.write*/
+    document.write('<br>');
+    document.write('<br>');
+
+
+    for (let x = 0; x < 100; x++) {
+        console.log('Rain: '+x+'');
+         document.write('Rain: '+x+'');
+    }
+    /*- Створити цикл for на 100 ітерацій з кроком 2.
+    Вивести поточний номер кроку через console.log та document.write*/
+    document.write('<br>');
+    document.write('<br>');
+
+
+    for (let y=0; y<100; y+=2){
+        console.log('Winter: '+y+'');
+        document.write('Winter: '+y+'');
+    }
+    /*- Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write*/
+    document.write('<br>');
+    document.write('<br>');
+
+    for (let z=0; z<100; z++){
+        if (z %2 ===0){
+            console.log('Парні кроки: '+z+'');
+            document.write('Парні кроки: '+z+'');
+        }
+    }
+    /*- Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write*/
+    document.write('<br>');
+    document.write('<br>');
+
+    for (let v=0; v<100; v++) {
+        if (v % 2 === 1) {
+            console.log('Непарні кроки: ' + v + '');
+            document.write('Непарні кроки: ' + v + '');
+        }
+    }
+</script>
+
+</body>
+</html>
