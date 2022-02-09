@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*- створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б*/
+    function foo(a,b){
+        return a*b;
+    }
+   console.log(foo(12,3));
+    /*- створити функцію яка обчислює та повертає площу кола з радіусом r*/
+    function foo_2(){
+        a=3.14;
+        b=6;    //radius
+        return a*6**2
+    }
+    let number_2 = foo_2();
+    console.log(number_2);
+    /*- створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r*/
+    function foo_3(){
+        let a=3.14;
+        let b=7;     //radius
+        let c=18;    //h
+        return 2*a*b*c;
+    }
+    let number_3 = foo_3();
+    console.log(number_3);
+    /*- створити функцію яка приймає масив та виводить кожен його елемент*/
+    let mas=['Oh', 'my', 'God'];
+    function foo_4(){
+        for (let i=0; i<mas.length; i++){
+            console.log(mas[i])
+        }
+    }
+    foo_4(mas)
+    /*- створити функцію яка створює параграф з текстом. Текст задати через аргумент*/
+    function p(a){
+        document.write(`<p>${a}</p>`)
+    }
+    p('Hysteria will begin now!!!');
+    /*- створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий*/
+    function ul(b){
+        document.write('<ul>');
+        document.write(`<li>${b}</li>`);
+        document.write(`<li>${b}</li>`);
+        document.write(`<li>${b}</li>`);
+        document.write('</ul>');
+    }
+    ul('And what will happen next?');
+    /*- створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий.
+    Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)*/
+    function ul_2(c, number) {
+        document.write(`<ul>`)
+         for (let i = 0; i < number; i++) {
+             document.write(`<li>${c}</li>`);
+         }
+         document.write(`</ul>`)
+     }
+     ul_2('Help', 3);
+    /*- створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список*/
+    let m=['banana', 'apple', 368, true, false];
+    function d(what) {
+        document.write(`<ul>`)
+        for (let i = 0; i < what.length ; i++) {
+            document.write(`<li>${what[i]}</li>`);
+        }
+        document.write(`</ul>`)
+    }
+    d(m)
+    /*- створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ.
+    Для кожного об'єкту окремий блок.*/
+    let objekt=[{id: 1, name:'Helen', age: 38},{id:2, name:'Max', age: 15},{id: 3, name:'Alex', age:5},{id:4, name:'Viktoria', age:18}];
+    function doc(write){
+        for (let i of write)
+        document.write(`<div>${i.id}.${i.name},${i.age}</div>`)
+    }
+    doc(objekt)
+
+
+</script>
+</body>
+</html>

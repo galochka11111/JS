@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*- створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)*/
+    function foo(a,b,c){
+        if (a<b && a<c){
+            console.log(a)
+        }else if (b<a && b<c){
+            console.log(b)
+        }else {
+            console.log(c)
+        }
+    }
+    foo(4,8,5)
+    /*- створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)*/
+    function foo_2(a,b,c){
+        if (a>b && a>c){
+            console.log(a)
+        }else if (b>a && b>c){
+            console.log(b)
+        }else {
+            console.log(c)
+        }
+    }
+    foo_2(6,9,14);
+    /*- створити функцію яка приймає масив чисел, сумує значення елементів
+    масиву та повертає його. Приклад [1,2,10]->13*/
+    function sum(summa){
+    let x=0;
+    for (let el of summa){
+        x=x+el;
+    }
+    return x
+    }
+    sum([10,15,20,25]);
+    /*- створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.*/
+    function serAR(ser){
+        let y=0;
+        for (let i of ser){
+            y=y+i/ser.length
+        }
+        return y
+    }
+    serAR([3,7,11,4,5,12]);
+    /*створити функцію яка заповнює масив рандомними числами
+(цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.*/
+    function mat() {
+      return   Math.round(Math.random()*100)
+    }
+    let m=mat();
+    console.log(m)
+</script>
+</body>
+</html>
