@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*- створити функцію яка обчислює та повертає площу прямокутника*/
+    let f=(a, b)=> {
+        return a * b
+    }
+    console.log(f(4,6))
+    /*- створити функцію яка обчислює та повертає площу кола*/
+    let fTwo=(r)=>{
+        return 3.14*r**2;
+    }
+    console.log(fTwo(6))
+    /*- створити функцію яка обчислює та повертає площу циліндру*/
+    let fThree=(c,d)=>{
+        return 2*3.14*c*d;
+    }
+    console.log(fThree(4,9));
+    /*- створити функцію яка приймає масив та виводить кожен його елемент*/
+    let x=[2,15,68,90];
+    let funX=x=>{
+        for (let i=0; i<x.length; i++){
+            console.log(x[i])
+        }
+    }
+    funX(x);
+    /*- створити функцію яка  створює параграф з текстом. Текст задати через аргумент*/
+    let fFour=(y)=>{
+        document.write(`<p>${y}</p>`)
+    }
+    fFour('Ведмідь заліг у свій барліг, коли на землю випав сніг.');
+    /*- створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий*/
+    let fFive=(q)=>{
+        document.write(`<ul>`);
+        document.write(`<li>${q}</li>`);
+        document.write(`<li>${q}</li>`);
+        document.write(`<li>${q}</li>`);
+        document.write(`</ul>`);
+    }
+    fFive(`Ведмідь заліг`);
+    /*- створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий.
+    Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)*/
+    let fSix=(w,number)=>{
+        document.write(`<ul>`);
+        for (let i=0; i<number;i++){
+            document.write(`<li>${w}</li>`);
+        }
+        document.write(`</ul>`);
+    }
+    fSix(`Як випав сніг.`, 3);
+    /*- створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список*/
+    let e=[true,'Bear', 15, 18, 3,'Tiny bear'];
+    let fSeven=(mas)=>{
+        document.write(`<ul>`);
+        for (let i=0; i<mas.length; i++){
+            document.write(`<li>${mas[i]}</li>`)
+        }
+        document.write(`</ul>`);
+    }
+    fSeven(e);
+    /*- створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ.
+    Для кожного об'єкту окремий блок.*/
+    let n=[{id:1, name:'Viktoria', age:16},{id:2, name:'Alex', age:25},{id:3, name:'Julia', age:39}];
+    let fEight=(m)=>{
+        for (let element of m){
+            document.write(`<div>${element.id}.${element.name},${element.age}</div>`)
+        }
+    }
+    fEight(n);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*- створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)*/
+    let fun=(a, b, c)=>{
+        if (a<b && a<c){
+            console.log (a);
+        }else if (b<a && b<c){
+            console.log(b);
+        }else{
+            console.log(c)
+        }
+    }
+    fun(3,15,18);
+    /*- створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)*/
+    let funTwo=(a, b, c)=>{
+        if (a>b && a>c){
+            console.log (a);
+        }else if (b>a && b>c){
+            console.log(b);
+        }else{
+            console.log(c)
+        }
+    }
+    funTwo(6,12,22);
+    /*- створити функцію яка повертає найбільше число з масиву*/
+    let x=[100,500,200,42,13];
+    let funThree=(max)=>{
+        let maximum=max[0];
+        for (let el of max){
+            if (el>maximum){
+                maximum=el
+            }
+        }
+        return maximum
+        }
+        console.log(funThree(x));
+    /*- створити функцію яка повертає найменьше число з масиву*/
+    let funFour=(min)=>{
+        let minimum=min[0];
+        for(let el of min){
+            if(el<minimum){
+                minimum=el
+            }
+        }
+        return minimum
+    }
+    console.log(funFour(x));
+    /*- створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його.
+    Приклад [1,2,10]->13*/
+    let funFive=(sum)=>{
+        let sumMas=0;
+        for (let el of sum){
+            sumMas=el+sumMas
+        }
+        return sumMas
+    }
+    console.log(funFive(x));
+    /*- створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.*/
+    let funSix=(middle)=>{
+        let middleN=0;
+        for (let el of middle){
+            middleN=el+middleN
+        }
+        return middleN/x.length
+    }
+    console.log(funSix(x));
+    /*- створити функцію яка приймає будь-яку кількість чисел, повертає найменьше,
+    а виводить найбільше (Math використовувати заборонено);*/
+    //let y=[...abc];
+    let funSeven=(...abc)=>{
+        let nStart=abc[0];
+        let nFinish=abc[0];
+        for (let el of abc){
+            if (el<abc){                          // не розумію... виводить перше число...
+                nStart=el;
+            }else if (el>abc){
+                nFinish=el
+            }
+        }
+        console.log(nFinish)
+        return nStart
+    }
+    funSeven(4,35,453,34,54,1);
+    /*- створити функцію яка заповнює масив рандомними числами*/
+    let fEight= (r)=>{
+        let array=[];
+        for (i=0; i<r; i++){
+            array.push(Math.floor(Math.random()*100));
+        }
+        return array
+    }
+    document.write(`${fEight(30)}`);
+    /*- створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit.
+    limit - аргумент, який характеризує кінцеве значення діапазону.*/
+    document.write('<br>')
+
+    let fNine= (start,limit)=>{
+        let array_2=[];
+        for (i=0; i<start; i++){
+            array_2.push(Math.floor(Math.random()*limit));
+        }
+        return array_2;
+    }
+    document.write(`${fNine(7,15)}`);
+    /*- Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].*/
+    let arr_3 = [4, 52, 13, 2, 6, 19];
+    let fTen=(revers)=> {
+        let arrRew=[];
+        for (let i = 0, ri = arr_3.length - 1; i < arr_3.length; i++, ri--){
+            arrRew[ri]=revers[i];
+        }
+        return arrRew;
+    }
+    console.log(fTen(arr_3));
+</script>
+</body>
+</html>
