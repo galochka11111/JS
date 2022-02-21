@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*- Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
+створити пустий масив, наповнити його 10 об'єктами new User(....)*/
+
+    function User(id, name, surname, email, phone) {
+                 this.id = id;
+                 this.name = name;
+                 this.surname = surname;
+                 this.email = email;
+                 this.phone = phone;
+         }
+     let user = [
+         new User(1, 'Max', 'Avakian', 'avakian.@mail.com', 553533335),
+         new User(2, 'Anna', 'Adamson', 'adamson.@mail.com', 645657746),
+         new User(3, 'Viktoria', 'Hadler', 'hadler.@mail.com', 3393993),
+         new User(4, 'Monika', 'Eaden', 'eaden.@mail.com', 54664666),
+         new User(5, 'Inessa', 'Racey', 'racey.@mail.com', 64564666),
+         new User(6, 'Grzegorz', 'Kosecki', 'kosecki.@mail.com', 365484),
+         new User(7, 'Alex', 'Renforth', 'renforth.@mail.com', 3455453),
+         new User(8, 'Maria', 'Zerba', 'zerba.@mail.com', 776756646),
+         new User(9, 'Karolina', 'Upston', 'upston.@maol.com',787798708),
+         new User(10, 'Julia', 'Kellison', 'kellison.@mail.com', 96969008),];
+     console.log(user);
+
+    /*- Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об'єкти з парними id (filter)*/
+    let a=user.filter((us=>{
+        if (us.id%2===0){
+            return us
+        }
+    }))
+    console.log(a)
+    /*- Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)*/
+    let b=user.sort((current, next)=>current.id-next.id);
+    console.log(b)
+    /*- створити класс для об'єктів Client з полями id, name, surname , email, phone, order
+    (поле є масивом зі списком товарів)створити пустий масив, наповнити його 10 об'єктами Client*/
+    class Client{
+
+        constructor(id, name, surname, email, phone, order) {
+            this.id = id;
+            this.name = name;
+            this.surname = surname;
+            this.email = email;
+            this.phone = phone;
+            this.order = order;
+        }
+    }
+    let m=[
+        new Client(1, 'Max', 'Avakian', 'avakian.@mail.com', 553533335, ['milk', 'bread', 'apple']),
+        new Client(2, 'Anna', 'Adamson', 'adamson.@mail.com', 645657746, ['water', 'potato','tomato']),
+        new Client(3, 'Viktoria', 'Hadler', 'hadler.@mail.com', 3393993, ['milk', 'apple']),
+        new Client(4, 'Monika', 'Eaden', 'eaden.@mail.com', 54664666, ['water', 'fish','potato','tomato']),
+        new Client(5, 'Inessa', 'Racey', 'racey.@mail.com', 64564666, ['milk', 'bread', 'apple']),
+        new Client(6, 'Grzegorz', 'Kosecki', 'kosecki.@mail.com', 365484, ['water', 'potato','butter', 'milk', 'tomato']),
+        new Client(7, 'Alex', 'Renforth', 'renforth.@mail.com', 3455453, ['milk', 'bread', 'apple']),
+        new Client(8, 'Maria', 'Zerba', 'zerba.@mail.com', 776756646, ['water','milk', 'butter','fish', 'bread', 'potato','tomato']),
+        new Client(9, 'Karolina', 'Upston', 'upston.@mail.com',787798708, ['milk', 'bread', 'apple']),
+        new Client(10, 'Julia', 'Kellison', 'kellison.@mail.com', 96969008, ['water', 'potato','tomato'])];
+    console.log(m);
+    /*- Взяти масив (Client [] з попереднього завдання).
+    Відсортувати його по кількості товарів в полі order по зростанню. (sort)*/
+    let sortM=m.sort((current,next)=>current.order.length - next.order.length);
+    console.log(sortM)
+</script>
+</body>
+</html>
