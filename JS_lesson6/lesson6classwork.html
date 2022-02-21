@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*- створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.*/
+    let a=(x,y)=>{
+        let arr=[];
+        for (j=0;j<x;j++){
+            arr.push(Math.floor(Math.random()*y))
+        }
+        return arr
+    }
+    document.writeln(`${a(10,100)}`);
+    /*- створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень.
+    Відсортувати його за допомоги sort*/
+    let b=[40,6,35,12,58,16,4];
+    let bSort=b.sort(function (current,next){
+        return current-next;
+    });
+    console.log(bSort);
+
+</script>
+</body>
+</html>
