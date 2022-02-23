@@ -27,7 +27,7 @@ for (el of d){
 
 let c=document.getElementsByTagName('div');
 for (el of c){
-    el.style.background='red'
+    el.style.background='blue'
 }
 /*-- змініть кожному елементу колір тексту на синій*/
 
